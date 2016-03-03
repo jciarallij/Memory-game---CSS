@@ -13,14 +13,14 @@
 	</div>
 
 	<div id="right-header">
-		<button type="">Start Over</button>
+		<button type="" onclick="restart();">Start Over</button>
 	</div>	
 </div>
 
 <div id="game-wrapper">
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-01.png">
@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-02.png">
@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-03.png">
@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-04.png">
@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-05.png">
@@ -65,7 +65,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-06.png">
@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-07.png">
@@ -83,7 +83,7 @@
 		</div>
 
 		<div class="tile">
-			<div class="inside-tile">
+			<div class="inside-tile" onclick="flip(this);">
 				<div class="back"></div>
 				<div class="front">
 					<img src="img/default/monsters-08.png">
@@ -93,9 +93,37 @@
 
 
 
-</div>
+</div> <!-- game-wrapper -->
+<script type="text/javascript">
+	function flip(element) {
+		if(element.children[0].style.display == "block"){
+			element.children[0].style.display = "none";
+			element.children[1].style.display = "block";
+	}	
+		else {
+			element.children[0].style.display = "block";
+			element.children[1].style.display = "none";
+		}
+}
 
 
 
+	function restart() {
+		var back = document.getElementsByClassName('back');
+		console.log(back);
+		for (i = 0; i<back.length; i++){
+			back[i].style.display = "block";
+		}
+		var front = document.getElementsByClassName('front');
+		for (i = 0; i<front.length; i++){
+			front[i].style.display = "none";
+		}
+}
+
+
+
+
+
+</script>
 </body>
 </html>
