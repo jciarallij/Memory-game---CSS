@@ -4,7 +4,7 @@ body{
 }
 
 img{
-	width: 100%;
+	width: 99%;
 }
 
 #header {
@@ -47,8 +47,8 @@ button {
 	float: left;
 	position: relative;
 	width: 25%;
-	height: 30%;
-	padding: 11%;
+	height: 26%;
+	padding: 10px;
 	box-sizing: border-box;
 	border: 5px solid #fff;
 }
@@ -67,6 +67,7 @@ button {
 }
 
 .front {
-	display: none;	
+	display: none;
+	border: 2px solid black;	
 }
 
